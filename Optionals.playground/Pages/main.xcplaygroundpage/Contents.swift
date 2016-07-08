@@ -12,8 +12,8 @@
 /*: question1
  ### 1. What is the type of the variable `pet` declared below?
  */
-var pet = "turtle 🐢"
-
+var pet = "turtle "
+// a string
 
 
 
@@ -24,7 +24,7 @@ var pet = "turtle 🐢"
  */
 var petName: String?
 
-
+// a string optional
 
 
 
@@ -32,7 +32,7 @@ var petName: String?
 /*: question3
  ### 3. Currently, what is the _value_ of `petName`?
  */
-
+// nil
 
 
 
@@ -45,8 +45,8 @@ var petName: String?
 // write your code here
 
 
-
-
+petName = "dog"
+// still a string optional
 
 
 
@@ -54,7 +54,9 @@ var petName: String?
  ### 5. Print out `petName` using Swift's `print()` function. What do you expect to see in the console?
  */
 // write your code here
+// I expect to see Optional("dog")
 
+print(petName)
 
 
 
@@ -65,7 +67,14 @@ var petName: String?
  ### 6. Write an if statement that only prints `petName`'s value if it is not `nil`. If `petName` is `nil`, print, "There is no pet name." What do you expect to see in the console?
  */
 // write your code here
+//I expect to see Optional(dog)
 
+if petName != nil {
+    print("\(petName)")
+}
+else {
+    print("There is no pet name")
+}
 
 
 
@@ -77,6 +86,12 @@ var petName: String?
  */
 // write your code here
 
+if let petName = petName {
+    print("\(petName)")
+}
+else {
+    print("There is no pet name")
+}
 
 
 
@@ -89,9 +104,7 @@ var petName: String?
 var anotherPetName: String?
 // write your code here
 
-
-
-
+print("the value of anotherPetName is \(anotherPetName)")
 
 
 
@@ -100,8 +113,12 @@ var anotherPetName: String?
  */
 // write your code here
 
-
-
+if let yetAnotherPetName = anotherPetName {
+    print(anotherPetName)
+}
+else {
+    print("anotherPetName has no value")
+}
 
 
 
@@ -113,8 +130,11 @@ var anotherPetName: String?
  */
 // write your code here
 
+let str: String?
 
+str = "value"
 
+print(str)
 
 
 
@@ -126,6 +146,10 @@ var anotherPetName: String?
  */
 // write your code here
 
+// it does not accept the value because it is a constant and already is assigned something - even though it is assigned nil
+
+var str2: String? = nil
+str2 = "value"
 
 
 
